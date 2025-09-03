@@ -60,11 +60,11 @@ export default function Hero() {
             ◆ VER PORTFOLIO ◆
           </Button>
           <Button 
-            className="holographic px-12 py-6 text-xl font-bold uppercase tracking-wider text-accent border-2 border-accent hover:bg-accent hover:text-black transition-all duration-500 transform hover:scale-110"
+            className="px-12 py-6 text-xl font-bold uppercase tracking-wider text-white border-2 border-white bg-transparent hover:bg-white hover:text-black transition-all duration-500 transform hover:scale-110"
             onClick={() => scrollToSection('contato')}
-            data-testid="button-agendar-consulta"
+            data-testid="button-fale-conosco"
           >
-            ◇ AGENDAR CONSULTA ◇
+            ◇ FALE CONOSCO ◇
           </Button>
         </div>
       </div>
