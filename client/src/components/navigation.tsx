@@ -43,7 +43,7 @@ export default function Navigation() {
               <img 
                 src={logoImage}
                 alt="Queen of Hearts Tattoos Logo"
-                className="h-10 w-auto"
+                className="h-16 w-auto"
               />
             </button>
             
