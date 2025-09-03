@@ -26,8 +26,10 @@ export default function Navigation() {
   return (
     <>
       <nav 
-        className={`fixed top-0 left-0 right-0 z-50 glass-card transition-all duration-300 ${
-          isScrolled ? 'bg-opacity-95' : ''
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-black border-b-2 border-accent shadow-lg backdrop-blur-sm' 
+            : 'bg-gradient-to-r from-black via-gray-900 to-black border-b border-accent/30'
         }`}
         data-testid="navigation"
       >
@@ -35,15 +37,17 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             <button
               onClick={() => scrollToSection('inicio')}
-              className="flex items-center space-x-3 hover:opacity-80 transition-all duration-300"
+              className="flex items-center space-x-3 hover:scale-105 transition-all duration-300 group"
               data-testid="logo-button"
             >
-              <img 
-                src={logoImage}
-                alt="Queen of Hearts Tattoos Logo"
-                className="h-10 w-auto"
-                data-testid="logo-image"
-              />
+              <div className="border-2 border-accent/50 rounded-md p-1 bg-black/70 group-hover:border-accent transition-all">
+                <img 
+                  src={logoImage}
+                  alt="Queen of Hearts Tattoos Logo"
+                  className="h-10 w-auto"
+                  data-testid="logo-image"
+                />
+              </div>
             </button>
             
             <div className="hidden md:flex items-center space-x-8">

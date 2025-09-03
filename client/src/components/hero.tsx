@@ -26,15 +26,17 @@ export default function Hero() {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6" data-testid="hero-content">
         <div className="mb-8 animate-fade-in">
           <div className="mb-8 flex justify-center" data-testid="hero-logo-container">
-            <img 
-              src={logoImage}
-              alt="Queen of Hearts Tattoos Logo"
-              className="h-32 w-auto"
-              data-testid="hero-logo"
-            />
+            <div className="vintage-border rounded-lg p-4 bg-black/50 backdrop-blur-sm">
+              <img 
+                src={logoImage}
+                alt="Queen of Hearts Tattoos Logo"
+                className="h-40 w-auto drop-shadow-2xl"
+                data-testid="hero-logo"
+              />
+            </div>
           </div>
-          <h2 className="font-serif text-2xl md:text-3xl text-muted-foreground mb-8" data-testid="hero-subtitle">
-            Tattoos Lisboa
+          <h2 className="font-serif text-2xl md:text-3xl text-muted-foreground mb-8 tattoo-shadow" data-testid="hero-subtitle">
+            ⚜ Tattoos Lisboa ⚜
           </h2>
         </div>
         
@@ -45,7 +47,7 @@ export default function Hero() {
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in">
           <Button 
-            className="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:golden-glow transition-all duration-300 transform hover:scale-105"
+            className="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:red-glow transition-all duration-300 transform hover:scale-105"
             onClick={() => scrollToSection('portfolio')}
             data-testid="button-ver-portfolio"
           >

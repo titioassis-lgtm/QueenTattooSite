@@ -55,7 +55,7 @@ export default function Portfolio() {
           {portfolioItems.map((item) => (
             <div 
               key={item.id}
-              className="glass-card rounded-lg overflow-hidden group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:golden-glow"
+              className="glass-card rounded-lg overflow-hidden group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:red-glow"
               data-testid={`portfolio-item-${item.id}`}
             >
               <div className="aspect-square overflow-hidden">

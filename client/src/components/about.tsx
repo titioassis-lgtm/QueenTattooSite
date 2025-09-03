@@ -27,7 +27,7 @@ export default function About() {
               </div>
             </div>
             
-            <Button className="bg-accent text-accent-foreground px-8 py-3 rounded-lg font-semibold hover:golden-glow transition-all duration-300" data-testid="button-conhecer-equipe">
+            <Button className="bg-accent text-accent-foreground px-8 py-3 rounded-lg font-semibold hover:red-glow transition-all duration-300" data-testid="button-conhecer-equipe">
               Conhecer a Equipe
             </Button>
           </div>

@@ -156,7 +156,7 @@ export default function Contact() {
               
               <Button 
                 type="submit" 
-                className="w-full bg-accent text-accent-foreground py-3 rounded-lg font-semibold hover:golden-glow transition-all duration-300"
+                className="w-full bg-accent text-accent-foreground py-3 rounded-lg font-semibold hover:red-glow transition-all duration-300"
                 disabled={contactMutation.isPending}
                 data-testid="button-submit-contact"
               >

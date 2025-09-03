@@ -64,7 +64,7 @@ export default function Services() {
             return (
               <div 
                 key={service.id}
-                className="glass-card rounded-lg p-8 text-center group hover:golden-glow transition-all duration-300"
+                className="glass-card rounded-lg p-8 text-center group hover:red-glow transition-all duration-300"
                 data-testid={`service-${service.id}`}
               >
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">

@@ -30,7 +30,7 @@ export default function Footer() {
                 href="https://www.instagram.com/queenofheartstattooslisbon/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-accent rounded-full flex items-center justify-center hover:golden-glow transition-all duration-300"
+                className="w-10 h-10 bg-accent rounded-full flex items-center justify-center hover:red-glow transition-all duration-300"
                 data-testid="footer-instagram"
               >
                 <Instagram className="text-accent-foreground" />
