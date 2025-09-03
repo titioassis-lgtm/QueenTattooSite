@@ -1,3 +1,5 @@
+import logoImage from "@assets/queen_of_hearts_no_bg_v2_1756927539558.png";
+
 export default function Portfolio() {
   const portfolioItems = [
     {
@@ -8,9 +10,9 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
-      title: "Estilo Tradicional",
-      description: "Cores vibrantes e traços marcantes"
+      image: logoImage,
+      title: "Queen of Hearts",
+      description: "Nossa identidade visual única"
     },
     {
       id: 3,
