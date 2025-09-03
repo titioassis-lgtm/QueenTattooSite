@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Crown, Menu, X, Instagram } from "lucide-react";
+import { Menu, X, Instagram } from "lucide-react";
+import logoImage from "@assets/444492753_1007221770758862_3225863585255241508_n_1756924805834.jpg";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,11 +35,15 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             <button
               onClick={() => scrollToSection('inicio')}
-              className="flex items-center space-x-2 hover:text-accent transition-colors duration-300"
+              className="flex items-center space-x-3 hover:opacity-80 transition-all duration-300"
               data-testid="logo-button"
             >
-              <Crown className="text-accent text-2xl" />
-              <span className="font-serif text-xl font-bold">Queen of Hearts</span>
+              <img 
+                src={logoImage}
+                alt="Queen of Hearts Tattoos Logo"
+                className="h-10 w-auto"
+                data-testid="logo-image"
+              />
             </button>
             
             <div className="hidden md:flex items-center space-x-8">

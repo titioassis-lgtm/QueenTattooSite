@@ -1,4 +1,5 @@
-import { Crown, Instagram, Facebook, Phone, MapPin, Mail } from "lucide-react";
+import { Instagram, Facebook, Phone, MapPin, Mail } from "lucide-react";
+import logoImage from "@assets/444492753_1007221770758862_3225863585255241508_n_1756924805834.jpg";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -13,9 +14,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div data-testid="footer-brand">
-            <div className="flex items-center space-x-2 mb-6">
-              <Crown className="text-accent text-2xl" />
-              <span className="font-serif text-xl font-bold">Queen of Hearts</span>
+            <div className="flex items-center space-x-3 mb-6">
+              <img 
+                src={logoImage}
+                alt="Queen of Hearts Tattoos Logo"
+                className="h-8 w-auto"
+                data-testid="footer-logo"
+              />
             </div>
             <p className="text-muted-foreground mb-6">
               Estúdio premium de tatuagem em Lisboa, criando arte única com paixão e profissionalismo.
