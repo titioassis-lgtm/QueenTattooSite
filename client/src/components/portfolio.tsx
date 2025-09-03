@@ -2,37 +2,37 @@ export default function Portfolio() {
   const portfolioItems = [
     {
       id: 1,
-      image: "https://pixabay.com/get/g012c99396dbffbc307459264f4c279a5180137b558e6cc15c07c76ebe4b31213cb9160eb95d7576ae9518a837e0974e61f4bcf91a3c6f31106002593a179eb11_1280.jpg",
+      image: "https://images.unsplash.com/photo-1565058379802-bbe93b2a46c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
       title: "Realismo Preto & Cinza",
       description: "Técnica avançada de sombreamento"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+      image: "https://images.unsplash.com/photo-1590246814883-57c511ad2d05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
       title: "Estilo Tradicional",
       description: "Cores vibrantes e traços marcantes"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+      image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
       title: "Fine Line",
       description: "Delicadeza e precisão em cada traço"
     },
     {
       id: 4,
-      image: "https://pixabay.com/get/g8d9617e533643f6be7c5f513dc6e7af6c1254c18669cb65a159388092a74a58b5c9512c58673a3f744bef8a8f418d612426ef4c8288d23380ab7dcb2cac84827_1280.jpg",
+      image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
       title: "Geometria Sagrada",
       description: "Padrões complexos e simétricos"
     },
     {
       id: 5,
-      image: "https://pixabay.com/get/ga068d9d84b7b068d87827fe6dec234766ac2174593cd14b3f692ee766a86f521b01b4df0fd1e27dc6a82572383d25cba1dae15d4cec301e1bd0e42db88279707_1280.jpg",
+      image: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
       title: "Estilo Japonês",
       description: "Tradição milenar oriental"
     },
     {
       id: 6,
-      image: "https://pixabay.com/get/g13929b07fbe7ea6e2f57d2702db26ea7d745622e057495dd44a5751b192a34e7c46d8b6d37baec27a899b0b8def3348385f002de8609f1fcd57284bd8e2f0038_1280.jpg",
+      image: "https://images.unsplash.com/photo-1594736797933-d0c86ba40665?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
       title: "Aquarela",
       description: "Efeitos artísticos únicos"
     }

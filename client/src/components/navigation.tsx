@@ -37,10 +37,14 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             <button
               onClick={() => scrollToSection('inicio')}
-              className="cyber-title text-xl font-bold hover:scale-110 transition-all duration-500 hover:text-shadow-neon"
+              className="hover:scale-110 transition-all duration-500"
               data-testid="logo-button"
             >
-              QUEEN OF HEARTS
+              <img 
+                src={logoImage}
+                alt="Queen of Hearts Tattoos Logo"
+                className="h-10 w-auto"
+              />
             </button>
             
             <div className="hidden md:flex items-center space-x-8">
