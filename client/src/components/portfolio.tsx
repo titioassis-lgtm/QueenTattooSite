@@ -79,9 +79,15 @@ export default function Portfolio() {
         </div>
         
         <div className="text-center mt-12">
-          <button className="border border-accent text-accent px-8 py-3 rounded-lg font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300" data-testid="button-ver-mais">
+          <a 
+            href="https://www.instagram.com/queenofheartstattooslisbon/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border border-accent text-accent px-8 py-3 rounded-lg font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300" 
+            data-testid="button-ver-mais"
+          >
             Ver Mais Trabalhos
-          </button>
+          </a>
         </div>
       </div>
     </section>
