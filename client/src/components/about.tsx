@@ -36,8 +36,8 @@ export default function About() {
             {/* Professional tattoo studio interior */}
             <div className="glass-card rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="Interior moderno do estúdio de tatuagem"
+                src="https://images.unsplash.com/photo-1565058379802-bbe93b2a46c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="Interior moderno do Queen of Hearts Tattoos"
                 className="w-full h-64 object-cover"
                 data-testid="about-main-image"
               />
@@ -47,8 +47,8 @@ export default function About() {
               {/* Tattoo equipment and hygiene standards */}
               <div className="glass-card rounded-lg overflow-hidden">
                 <img 
-                  src="https://pixabay.com/get/g7ca4351bd57e30495f92551e09d79b84f4eecbf10f3fe4c09672f402a66e79fcdea34f6fc3540a307dbf4a7be22234ab393450807bbeba162af3b1696e9f975a_1280.jpg"
-                  alt="Equipamentos profissionais de tatuagem"
+                  src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                  alt="Equipamentos profissionais Queen of Hearts"
                   className="w-full h-32 object-cover"
                   data-testid="about-equipment-image"
                 />
@@ -56,8 +56,8 @@ export default function About() {
               {/* Professional tattoo artist at work */}
               <div className="glass-card rounded-lg overflow-hidden">
                 <img 
-                  src="https://pixabay.com/get/g7e65ab49edc030836d4418e648313ceb0e2a6d562a280a1deede9d942e3c510d4d62a5ed7dde8def759305c94471ef9dc94939dfd3b099d5f3eb1795cbb9c8e4_1280.jpg"
-                  alt="Artista profissional criando tatuagem"
+                  src="https://images.unsplash.com/photo-1590246814883-57c511ad2d05?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                  alt="Artista Queen of Hearts trabalhando"
                   className="w-full h-32 object-cover"
                   data-testid="about-artist-image"
                 />
