@@ -1,7 +1,10 @@
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -38,17 +41,17 @@ export default function Hero() {
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6" data-testid="hero-content">
         <div className="mb-12 animate-[optimized-fade_0.6s_ease-out]">
           <h1 className="cyber-title text-4xl md:text-6xl lg:text-8xl font-bold mb-4 animate-[fade-in_1s_ease-out_0.5s_both]" data-testid="hero-title">
-            QUEEN OF HEARTS
+            {t('hero.title')}
           </h1>
           <h2 className="neon-text text-2xl md:text-4xl mb-8 animate-[fade-in_1s_ease-out_1s_both]" data-testid="hero-subtitle">
-            ◆ TATTOOS LISBOA ◆
+            {t('hero.subtitle')}
           </h2>
         </div>
         
         <p className="text-xl md:text-2xl text-foreground mb-16 leading-relaxed animate-[fade-in_1s_ease-out_1.5s_both] font-medium tracking-wide" data-testid="hero-description">
-          <span className="text-shadow-neon">ONDE A ARTE ENCONTRA A PELE</span><br />
-          <span className="text-accent">Estúdio premium de tatuagem no coração de Lisboa</span><br />
-          <span className="text-muted-foreground">Criando obras únicas com paixão e profissionalismo</span>
+          <span className="text-shadow-neon">{t('hero.description1')}</span><br />
+          <span className="text-accent">{t('hero.description2')}</span><br />
+          <span className="text-muted-foreground">{t('hero.description3')}</span>
         </p>
         
         <div className="flex flex-col sm:flex-row gap-8 justify-center animate-[fade-in_1s_ease-out_2s_both]">
@@ -57,14 +60,14 @@ export default function Hero() {
             onClick={() => scrollToSection('portfolio')}
             data-testid="button-ver-portfolio"
           >
-            ◆ VER PORTFOLIO ◆
+            {t('hero.btnPortfolio')}
           </Button>
           <Button 
             className="px-12 py-6 text-xl font-bold uppercase tracking-wider text-white border-2 border-white bg-transparent hover:bg-white hover:text-black transition-all duration-500 transform hover:scale-110"
             onClick={() => scrollToSection('contato')}
             data-testid="button-fale-conosco"
           >
-            ◇ FALE CONOSCO ◇
+            {t('hero.btnContact')}
           </Button>
         </div>
       </div>

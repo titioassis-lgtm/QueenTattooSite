@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Instagram } from "lucide-react";
+import { Menu, X, Instagram, Globe } from "lucide-react";
 import logoImage from "@assets/queen_of_hearts_no_bg_v2_1756927539558.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +55,7 @@ export default function Navigation() {
                 className="text-white hover:text-accent transition-all duration-300 font-semibold uppercase tracking-wide text-sm hover:text-shadow-neon relative group"
                 data-testid="nav-inicio"
               >
-                <span className="relative z-10">INÍCIO</span>
+                <span className="relative z-10">{t('nav.inicio')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded"></div>
               </button>
               <button
@@ -61,7 +63,7 @@ export default function Navigation() {
                 className="text-white hover:text-accent transition-all duration-300 font-semibold uppercase tracking-wide text-sm hover:text-shadow-neon relative group"
                 data-testid="nav-portfolio"
               >
-                <span className="relative z-10">PORTFOLIO</span>
+                <span className="relative z-10">{t('nav.portfolio')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded"></div>
               </button>
               <button
@@ -69,7 +71,7 @@ export default function Navigation() {
                 className="text-white hover:text-accent transition-all duration-300 font-semibold uppercase tracking-wide text-sm hover:text-shadow-neon relative group"
                 data-testid="nav-sobre"
               >
-                <span className="relative z-10">SOBRE</span>
+                <span className="relative z-10">{t('nav.sobre')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded"></div>
               </button>
               <button
@@ -77,7 +79,7 @@ export default function Navigation() {
                 className="text-white hover:text-accent transition-all duration-300 font-semibold uppercase tracking-wide text-sm hover:text-shadow-neon relative group"
                 data-testid="nav-servicos"
               >
-                <span className="relative z-10">SERVIÇOS</span>
+                <span className="relative z-10">{t('nav.servicos')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded"></div>
               </button>
               <button
@@ -85,12 +87,22 @@ export default function Navigation() {
                 className="text-white hover:text-accent transition-all duration-300 font-semibold uppercase tracking-wide text-sm hover:text-shadow-neon relative group"
                 data-testid="nav-contato"
               >
-                <span className="relative z-10">CONTATO</span>
+                <span className="relative z-10">{t('nav.contato')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded"></div>
               </button>
             </div>
             
             <div className="flex items-center space-x-4">
+              <button
+                onClick={() => setLanguage(language === 'pt' ? 'en' : 'pt')}
+                className="p-2 rounded-lg hover:neon-glow transition-all duration-300 hover:scale-105 group flex items-center space-x-1"
+                data-testid="language-toggle"
+              >
+                <Globe className="text-lg text-accent group-hover:text-white transition-colors" />
+                <span className="text-sm font-semibold text-accent group-hover:text-white transition-colors">
+                  {language.toUpperCase()}
+                </span>
+              </button>
               <a 
                 href="https://www.instagram.com/queenofheartstattooslisbon/" 
                 target="_blank" 

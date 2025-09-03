@@ -1,40 +1,43 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+
 export default function Portfolio() {
+  const { t } = useLanguage();
   const portfolioItems = [
     {
       id: 1,
       image: "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20210417_06Aiv59YwWyOTnV.jpg",
-      title: "Trabalho de Ann d'Cor",
-      description: "Arte detalhada da nossa artista residente"
+      title: t('portfolio.item1.title'),
+      description: t('portfolio.item1.desc')
     },
     {
       id: 2,
       image: "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20210417_j6gKFkbdt0UR5HX.jpg",
-      title: "Estilo Tradicional",
-      description: "Cores vibrantes e traços marcantes"
+      title: t('portfolio.item2.title'),
+      description: t('portfolio.item2.desc')
     },
     {
       id: 3,
       image: "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20210405_efWks9BIzhXlB37.jpg",
-      title: "Fine Line",
-      description: "Delicadeza e precisão em cada traço"
+      title: t('portfolio.item3.title'),
+      description: t('portfolio.item3.desc')
     },
     {
       id: 4,
       image: "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20210405_YwkFRM5tWlTeybV.jpg",
-      title: "Arte Personalizada",
-      description: "Design exclusivo Queen of Hearts"
+      title: t('portfolio.item4.title'),
+      description: t('portfolio.item4.desc')
     },
     {
       id: 5,
       image: "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20210405_VonDv39scuUe1EG.jpg",
-      title: "Trabalho Profissional",
-      description: "Qualidade excepcional em cada detalhe"
+      title: t('portfolio.item5.title'),
+      description: t('portfolio.item5.desc')
     },
     {
       id: 6,
       image: "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20191012_ybsBXdwxCaFJoFz.png",
-      title: "Maksym Yakubchyk",
-      description: "Obras do nosso artista especializado"
+      title: t('portfolio.item6.title'),
+      description: t('portfolio.item6.desc')
     }
   ];
 
@@ -43,10 +46,10 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="portfolio-title">
-            Nosso <span className="text-accent">Portfolio</span>
+            {t('portfolio.title')} <span className="text-accent">{t('portfolio.titleAccent')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="portfolio-description">
-            Cada tatuagem é uma obra de arte única. Explore nossa coleção de trabalhos realizados com dedicação e técnica excepcional.
+            {t('portfolio.description')}
           </p>
         </div>
         
@@ -88,7 +91,7 @@ export default function Portfolio() {
             className="inline-block border border-accent text-accent px-8 py-3 rounded-lg font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300" 
             data-testid="button-ver-mais"
           >
-            Ver Mais Trabalhos
+            {t('portfolio.btnMore')}
           </a>
         </div>
       </div>
