@@ -2,39 +2,39 @@ export default function Portfolio() {
   const portfolioItems = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1565058379802-bbe93b2a46c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
-      title: "Realismo Preto & Cinza",
-      description: "Técnica avançada de sombreamento"
+      image: "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20210417_06Aiv59YwWyOTnV.jpg",
+      title: "Trabalho de Ann d'Cor",
+      description: "Arte detalhada da nossa artista residente"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1590246814883-57c511ad2d05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+      image: "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20210417_j6gKFkbdt0UR5HX.jpg",
       title: "Estilo Tradicional",
       description: "Cores vibrantes e traços marcantes"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+      image: "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20210405_efWks9BIzhXlB37.jpg",
       title: "Fine Line",
       description: "Delicadeza e precisão em cada traço"
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
-      title: "Geometria Sagrada",
-      description: "Padrões complexos e simétricos"
+      image: "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20210405_YwkFRM5tWlTeybV.jpg",
+      title: "Arte Personalizada",
+      description: "Design exclusivo Queen of Hearts"
     },
     {
       id: 5,
-      image: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
-      title: "Estilo Japonês",
-      description: "Tradição milenar oriental"
+      image: "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20210405_VonDv39scuUe1EG.jpg",
+      title: "Trabalho Profissional",
+      description: "Qualidade excepcional em cada detalhe"
     },
     {
       id: 6,
-      image: "https://images.unsplash.com/photo-1594736797933-d0c86ba40665?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
-      title: "Aquarela",
-      description: "Efeitos artísticos únicos"
+      image: "https://d1kq2dqeox7x40.cloudfront.net/images/posts/20191012_ybsBXdwxCaFJoFz.png",
+      title: "Maksym Yakubchyk",
+      description: "Obras do nosso artista especializado"
     }
   ];
 
