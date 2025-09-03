@@ -23,43 +23,59 @@ export default function Hero() {
         }}
       />
       
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6" data-testid="hero-content">
-        <div className="mb-8 animate-fade-in">
-          <div className="mb-8 flex justify-center" data-testid="hero-logo-container">
-            <div className="vintage-border rounded-lg p-4 bg-black/50 backdrop-blur-sm">
+      {/* Animated particles background */}
+      <div className="floating-particles">
+        <div className="particle" style={{left: '10%', animationDelay: '0s'}}></div>
+        <div className="particle" style={{left: '20%', animationDelay: '2s'}}></div>
+        <div className="particle" style={{left: '30%', animationDelay: '4s'}}></div>
+        <div className="particle" style={{left: '40%', animationDelay: '1s'}}></div>
+        <div className="particle" style={{left: '50%', animationDelay: '3s'}}></div>
+        <div className="particle" style={{left: '60%', animationDelay: '5s'}}></div>
+        <div className="particle" style={{left: '70%', animationDelay: '2.5s'}}></div>
+        <div className="particle" style={{left: '80%', animationDelay: '4.5s'}}></div>
+        <div className="particle" style={{left: '90%', animationDelay: '1.5s'}}></div>
+      </div>
+      
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-6" data-testid="hero-content">
+        <div className="mb-12 animate-[zoom-in_1s_ease-out]">
+          <div className="mb-12 flex justify-center" data-testid="hero-logo-container">
+            <div className="logo-container animate-[glow-pulse_2s_ease-in-out_infinite_alternate,float_3s_ease-in-out_infinite]">
               <img 
                 src={logoImage}
                 alt="Queen of Hearts Tattoos Logo"
-                className="h-40 w-auto drop-shadow-2xl"
+                className="h-48 w-auto relative z-10"
                 data-testid="hero-logo"
               />
             </div>
           </div>
-          <h2 className="font-serif text-2xl md:text-3xl text-muted-foreground mb-8 tattoo-shadow" data-testid="hero-subtitle">
-            ⚜ Tattoos Lisboa ⚜
+          <h1 className="cyber-title text-4xl md:text-6xl lg:text-8xl font-bold mb-4 animate-[fade-in_1s_ease-out_0.5s_both]" data-testid="hero-title">
+            QUEEN OF HEARTS
+          </h1>
+          <h2 className="neon-text text-2xl md:text-4xl mb-8 animate-[fade-in_1s_ease-out_1s_both]" data-testid="hero-subtitle">
+            ◆ TATTOOS LISBOA ◆
           </h2>
         </div>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed animate-fade-in" data-testid="hero-description">
-          Onde a arte encontra a pele. Estúdio premium de tatuagem no coração de Lisboa,<br />
-          criando obras únicas com paixão e profissionalismo.
+        <p className="text-xl md:text-2xl text-foreground mb-16 leading-relaxed animate-[fade-in_1s_ease-out_1.5s_both] font-medium tracking-wide" data-testid="hero-description">
+          <span className="text-shadow-neon">ONDE A ARTE ENCONTRA A PELE</span><br />
+          <span className="text-accent">Estúdio premium de tatuagem no coração de Lisboa</span><br />
+          <span className="text-muted-foreground">Criando obras únicas com paixão e profissionalismo</span>
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in">
+        <div className="flex flex-col sm:flex-row gap-8 justify-center animate-[fade-in_1s_ease-out_2s_both]">
           <Button 
-            className="bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:red-glow transition-all duration-300 transform hover:scale-105"
+            className="cyber-border neon-glow px-12 py-6 text-xl font-bold uppercase tracking-wider text-white bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 transition-all duration-500 transform hover:scale-110 animate-[glow-pulse_3s_ease-in-out_infinite_alternate]"
             onClick={() => scrollToSection('portfolio')}
             data-testid="button-ver-portfolio"
           >
-            Ver Portfolio
+            ◆ VER PORTFOLIO ◆
           </Button>
           <Button 
-            variant="outline"
-            className="border border-accent text-accent px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+            className="holographic px-12 py-6 text-xl font-bold uppercase tracking-wider text-accent border-2 border-accent hover:bg-accent hover:text-black transition-all duration-500 transform hover:scale-110"
             onClick={() => scrollToSection('contato')}
             data-testid="button-agendar-consulta"
           >
-            Agendar Consulta
+            ◇ AGENDAR CONSULTA ◇
           </Button>
         </div>
       </div>

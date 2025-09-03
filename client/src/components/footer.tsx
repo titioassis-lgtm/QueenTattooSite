@@ -15,12 +15,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div data-testid="footer-brand">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src={logoImage}
-                alt="Queen of Hearts Tattoos Logo"
-                className="h-8 w-auto"
-                data-testid="footer-logo"
-              />
+              <div className="cyber-border rounded-lg p-2 bg-gradient-to-r from-black to-red-900/20">
+                <img 
+                  src={logoImage}
+                  alt="Queen of Hearts Tattoos Logo"
+                  className="h-8 w-auto"
+                  data-testid="footer-logo"
+                />
+              </div>
             </div>
             <p className="text-muted-foreground mb-6">
               Estúdio premium de tatuagem em Lisboa, criando arte única com paixão e profissionalismo.
@@ -46,7 +48,7 @@ export default function Footer() {
           </div>
           
           <div data-testid="footer-navigation">
-            <h4 className="font-semibold mb-6">Links Rápidos</h4>
+            <h4 className="neon-text text-lg font-bold mb-6 uppercase tracking-wide">Links Rápidos</h4>
             <ul className="space-y-3 text-muted-foreground">
               <li>
                 <button 
@@ -97,7 +99,7 @@ export default function Footer() {
           </div>
           
           <div data-testid="footer-services">
-            <h4 className="font-semibold mb-6">Serviços</h4>
+            <h4 className="neon-text text-lg font-bold mb-6 uppercase tracking-wide">Serviços</h4>
             <ul className="space-y-3 text-muted-foreground">
               <li><a href="#" className="hover:text-accent transition-colors duration-300">Design Personalizado</a></li>
               <li><a href="#" className="hover:text-accent transition-colors duration-300">Tatuagem Tradicional</a></li>
@@ -108,7 +110,7 @@ export default function Footer() {
           </div>
           
           <div data-testid="footer-contact">
-            <h4 className="font-semibold mb-6">Contato</h4>
+            <h4 className="neon-text text-lg font-bold mb-6 uppercase tracking-wide">Contato</h4>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-center">
                 <MapPin className="text-accent mr-3 w-4 h-4" />

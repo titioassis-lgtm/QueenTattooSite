@@ -26,10 +26,10 @@ export default function Navigation() {
   return (
     <>
       <nav 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled 
-            ? 'bg-black border-b-2 border-accent shadow-lg backdrop-blur-sm' 
-            : 'bg-gradient-to-r from-black via-gray-900 to-black border-b border-accent/30'
+            ? 'glass-card border-b-2 border-accent neon-glow' 
+            : 'bg-gradient-to-r from-black/80 via-red-900/20 to-black/80 border-b border-accent/50 backdrop-blur-sm'
         }`}
         data-testid="navigation"
       >
@@ -37,14 +37,14 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             <button
               onClick={() => scrollToSection('inicio')}
-              className="flex items-center space-x-3 hover:scale-105 transition-all duration-300 group"
+              className="flex items-center space-x-3 hover:scale-110 transition-all duration-500 group"
               data-testid="logo-button"
             >
-              <div className="border-2 border-accent/50 rounded-md p-1 bg-black/70 group-hover:border-accent transition-all">
+              <div className="cyber-border rounded-lg p-2 bg-gradient-to-r from-black to-red-900/20 group-hover:neon-glow transition-all duration-500">
                 <img 
                   src={logoImage}
                   alt="Queen of Hearts Tattoos Logo"
-                  className="h-10 w-auto"
+                  className="h-10 w-auto group-hover:brightness-110 transition-all duration-300"
                   data-testid="logo-image"
                 />
               </div>
@@ -53,38 +53,43 @@ export default function Navigation() {
             <div className="hidden md:flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection('inicio')}
-                className="hover:text-accent transition-colors duration-300"
+                className="text-white hover:text-accent transition-all duration-300 font-semibold uppercase tracking-wide text-sm hover:text-shadow-neon relative group"
                 data-testid="nav-inicio"
               >
-                Início
+                <span className="relative z-10">INÍCIO</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded"></div>
               </button>
               <button
                 onClick={() => scrollToSection('portfolio')}
-                className="hover:text-accent transition-colors duration-300"
+                className="text-white hover:text-accent transition-all duration-300 font-semibold uppercase tracking-wide text-sm hover:text-shadow-neon relative group"
                 data-testid="nav-portfolio"
               >
-                Portfolio
+                <span className="relative z-10">PORTFOLIO</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded"></div>
               </button>
               <button
                 onClick={() => scrollToSection('sobre')}
-                className="hover:text-accent transition-colors duration-300"
+                className="text-white hover:text-accent transition-all duration-300 font-semibold uppercase tracking-wide text-sm hover:text-shadow-neon relative group"
                 data-testid="nav-sobre"
               >
-                Sobre
+                <span className="relative z-10">SOBRE</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded"></div>
               </button>
               <button
                 onClick={() => scrollToSection('servicos')}
-                className="hover:text-accent transition-colors duration-300"
+                className="text-white hover:text-accent transition-all duration-300 font-semibold uppercase tracking-wide text-sm hover:text-shadow-neon relative group"
                 data-testid="nav-servicos"
               >
-                Serviços
+                <span className="relative z-10">SERVIÇOS</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded"></div>
               </button>
               <button
                 onClick={() => scrollToSection('contato')}
-                className="hover:text-accent transition-colors duration-300"
+                className="text-white hover:text-accent transition-all duration-300 font-semibold uppercase tracking-wide text-sm hover:text-shadow-neon relative group"
                 data-testid="nav-contato"
               >
-                Contato
+                <span className="relative z-10">CONTATO</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded"></div>
               </button>
             </div>
             
@@ -93,10 +98,10 @@ export default function Navigation() {
                 href="https://www.instagram.com/queenofheartstattooslisbon/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-accent transition-colors duration-300"
+                className="p-2 rounded-lg hover:neon-glow transition-all duration-500 hover:scale-110 group"
                 data-testid="instagram-link"
               >
-                <Instagram className="text-xl" />
+                <Instagram className="text-xl text-accent group-hover:text-white transition-colors" />
               </a>
               <button 
                 className="md:hidden"

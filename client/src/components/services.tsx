@@ -49,12 +49,13 @@ export default function Services() {
   return (
     <section id="servicos" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="services-title">
-            Nossos <span className="text-accent">Serviços</span>
+        <div className="text-center mb-20">
+          <h2 className="cyber-title text-5xl md:text-7xl font-bold mb-8 animate-[fade-in_1s_ease-out]" data-testid="services-title">
+            NOSSOS SERVIÇOS
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="services-description">
-            Oferecemos uma gama completa de serviços de tatuagem, desde consultorias personalizadas até workshops especializados.
+          <p className="text-xl md:text-2xl text-foreground max-w-3xl mx-auto leading-relaxed animate-[fade-in_1s_ease-out_0.3s_both]" data-testid="services-description">
+            <span className="neon-text font-bold">GAMA COMPLETA DE SERVIÇOS PROFISSIONAIS</span><br />
+            <span className="text-muted-foreground">Desde consultorias personalizadas até workshops especializados</span>
           </p>
         </div>
         
@@ -64,20 +65,23 @@ export default function Services() {
             return (
               <div 
                 key={service.id}
-                className="glass-card rounded-lg p-8 text-center group hover:red-glow transition-all duration-300"
+                className="holographic rounded-xl p-8 text-center group hover:neon-glow transition-all duration-700 transform hover:scale-105 hover:-rotate-1 animate-[fade-in_1s_ease-out]"
+                style={{animationDelay: `${service.id * 0.15}s`}}
                 data-testid={`service-${service.id}`}
               >
-                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Icon className="text-2xl text-accent-foreground" />
+                <div className="cyber-border w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:neon-glow transition-all duration-500 bg-gradient-to-br from-accent to-red-700">
+                  <Icon className="text-3xl text-white" />
                 </div>
-                <h3 className="font-serif text-2xl font-semibold mb-4" data-testid={`service-title-${service.id}`}>
+                <h3 className="neon-text text-2xl font-bold mb-6 uppercase tracking-wider" data-testid={`service-title-${service.id}`}>
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed" data-testid={`service-description-${service.id}`}>
+                <p className="text-foreground mb-8 leading-relaxed font-medium" data-testid={`service-description-${service.id}`}>
                   {service.description}
                 </p>
-                <div className="text-accent font-semibold" data-testid={`service-price-${service.id}`}>
-                  {service.price}
+                <div className="cyber-border inline-block px-6 py-3 rounded-lg">
+                  <div className="text-accent font-bold text-lg uppercase tracking-wide" data-testid={`service-price-${service.id}`}>
+                    {service.price}
+                  </div>
                 </div>
               </div>
             );
