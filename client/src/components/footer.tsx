@@ -1,5 +1,5 @@
 import { Instagram, Facebook, Phone, MapPin, Mail } from "lucide-react";
-import logoImage from "@assets/444492753_1007221770758862_3225863585255241508_n_1756924805834.jpg";
+import logoImage from "@assets/queen_of_hearts_no_bg_v2_1756927539558.png";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
