@@ -1,48 +1,51 @@
 import { Palette, Brush, PenTool, Image, Shapes, Heart } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Services() {
+  const { t } = useLanguage();
+  
   const services = [
     {
       id: 1,
       icon: Palette,
-      title: "Design Personalizado",
-      description: "Criamos designs únicos adaptados ao seu estilo e personalidade. Cada tatuagem é uma obra exclusiva.",
-      price: "A partir de €80"
+      title: t('services.design'),
+      description: t('services.design.desc'),
+      price: t('services.design.price')
     },
     {
       id: 2,
       icon: Brush,
-      title: "Tatuagem Tradicional",
-      description: "Estilo clássico com cores vibrantes e traços marcantes. Honramos a tradição da tatuagem old school.",
-      price: "A partir de €120"
+      title: t('services.traditional'),
+      description: t('services.traditional.desc'),
+      price: t('services.traditional.price')
     },
     {
       id: 3,
       icon: PenTool,
-      title: "Fine Line",
-      description: "Técnica delicada com linhas finas e detalhes precisos. Perfeito para designs minimalistas e elegantes.",
-      price: "A partir de €100"
+      title: t('services.fineline'),
+      description: t('services.fineline.desc'),
+      price: t('services.fineline.price')
     },
     {
       id: 4,
       icon: Image,
-      title: "Realismo",
-      description: "Técnica avançada que recria imagens com detalhes fotográficos. Especialidade em retratos e natureza.",
-      price: "A partir de €200"
+      title: t('services.realism'),
+      description: t('services.realism.desc'),
+      price: t('services.realism.price')
     },
     {
       id: 5,
       icon: Shapes,
-      title: "Geométrico",
-      description: "Padrões geométricos complexos e mandalas. Precisão matemática transformada em arte corporal.",
-      price: "A partir de €150"
+      title: t('services.geometric'),
+      description: t('services.geometric.desc'),
+      price: t('services.geometric.price')
     },
     {
       id: 6,
       icon: Heart,
-      title: "Cover-Up",
-      description: "Transformamos tatuagens antigas em novas obras de arte. Consultoria especializada em cobertura.",
-      price: "Consulta Gratuita"
+      title: t('services.coverup'),
+      description: t('services.coverup.desc'),
+      price: t('services.coverup.price')
     }
   ];
 
@@ -51,11 +54,11 @@ export default function Services() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="cyber-title text-5xl md:text-7xl font-bold mb-8 animate-[fade-in_0.6s_ease-out]" data-testid="services-title">
-            NOSSOS SERVIÇOS
+            {t('services.title')}
           </h2>
           <p className="text-xl md:text-2xl text-foreground max-w-3xl mx-auto leading-relaxed animate-[fade-in_0.6s_ease-out_0.2s_both]" data-testid="services-description">
-            <span className="neon-text font-bold">GAMA COMPLETA DE SERVIÇOS PROFISSIONAIS</span><br />
-            <span className="text-muted-foreground">Desde consultorias personalizadas até workshops especializados</span>
+            <span className="neon-text font-bold">{t('services.subtitle')}</span><br />
+            <span className="text-muted-foreground">{t('services.description')}</span>
           </p>
         </div>
         

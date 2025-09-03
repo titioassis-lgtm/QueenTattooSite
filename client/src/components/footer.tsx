@@ -1,7 +1,10 @@
 import { Instagram, Facebook, Phone, MapPin, Mail } from "lucide-react";
 import logoImage from "@assets/queen_of_hearts_no_bg_v2_1756927539558.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -25,7 +28,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-muted-foreground mb-6">
-              Estúdio premium de tatuagem em Lisboa, criando arte única com paixão e profissionalismo.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <a 
@@ -48,7 +51,7 @@ export default function Footer() {
           </div>
           
           <div data-testid="footer-navigation">
-            <h4 className="neon-text text-lg font-bold mb-6 uppercase tracking-wide">Links Rápidos</h4>
+            <h4 className="neon-text text-lg font-bold mb-6 uppercase tracking-wide">{t('footer.quickLinks')}</h4>
             <ul className="space-y-3 text-muted-foreground">
               <li>
                 <button 
@@ -56,7 +59,7 @@ export default function Footer() {
                   className="hover:text-accent transition-colors duration-300"
                   data-testid="footer-link-inicio"
                 >
-                  Início
+                  {t('nav.inicio')}
                 </button>
               </li>
               <li>
@@ -65,7 +68,7 @@ export default function Footer() {
                   className="hover:text-accent transition-colors duration-300"
                   data-testid="footer-link-portfolio"
                 >
-                  Portfolio
+                  {t('nav.portfolio')}
                 </button>
               </li>
               <li>
@@ -74,7 +77,7 @@ export default function Footer() {
                   className="hover:text-accent transition-colors duration-300"
                   data-testid="footer-link-sobre"
                 >
-                  Sobre
+                  {t('nav.sobre')}
                 </button>
               </li>
               <li>
@@ -83,7 +86,7 @@ export default function Footer() {
                   className="hover:text-accent transition-colors duration-300"
                   data-testid="footer-link-servicos"
                 >
-                  Serviços
+                  {t('nav.servicos')}
                 </button>
               </li>
               <li>
@@ -92,44 +95,44 @@ export default function Footer() {
                   className="hover:text-accent transition-colors duration-300"
                   data-testid="footer-link-contato"
                 >
-                  Contato
+                  {t('nav.contato')}
                 </button>
               </li>
             </ul>
           </div>
           
           <div data-testid="footer-services">
-            <h4 className="neon-text text-lg font-bold mb-6 uppercase tracking-wide">Serviços</h4>
+            <h4 className="neon-text text-lg font-bold mb-6 uppercase tracking-wide">{t('footer.services')}</h4>
             <ul className="space-y-3 text-muted-foreground">
-              <li><a href="#" className="hover:text-accent transition-colors duration-300">Design Personalizado</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors duration-300">Tatuagem Tradicional</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors duration-300">Fine Line</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors duration-300">Realismo</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors duration-300">Cover-Up</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors duration-300">{t('services.design')}</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors duration-300">{t('services.traditional')}</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors duration-300">{t('services.fineline')}</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors duration-300">{t('services.realism')}</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors duration-300">{t('services.coverup')}</a></li>
             </ul>
           </div>
           
           <div data-testid="footer-contact">
-            <h4 className="neon-text text-lg font-bold mb-6 uppercase tracking-wide">Contato</h4>
+            <h4 className="neon-text text-lg font-bold mb-6 uppercase tracking-wide">{t('footer.contact')}</h4>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-center">
                 <MapPin className="text-accent mr-3 w-4 h-4" />
-                Lisboa, Portugal
+                {t('footer.address')}
               </li>
               <li className="flex items-center">
                 <Phone className="text-accent mr-3 w-4 h-4" />
-                +351 912 345 678
+                {t('footer.phone')}
               </li>
               <li className="flex items-center">
                 <Mail className="text-accent mr-3 w-4 h-4" />
-                info@queenofheartslisboa.com
+                {t('footer.email')}
               </li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground" data-testid="footer-copyright">
-          <p>&copy; 2024 Queen of Hearts Tattoos Lisboa. Todos os direitos reservados.</p>
+          <p>&copy; 2024 Queen of Hearts Tattoos Lisboa. {t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

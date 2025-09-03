@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ContactForm {
   name: string;
@@ -19,6 +20,7 @@ interface ContactForm {
 
 export default function Contact() {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState<ContactForm>({
     name: "",
     email: "",
@@ -34,8 +36,8 @@ export default function Contact() {
     },
     onSuccess: () => {
       toast({
-        title: "Mensagem enviada!",
-        description: "Entraremos em contato em breve.",
+        title: t('contact.success.title'),
+        description: t('contact.success.desc'),
       });
       setFormData({
         name: "",
@@ -47,8 +49,8 @@ export default function Contact() {
     },
     onError: (error: any) => {
       toast({
-        title: "Erro ao enviar mensagem",
-        description: error.message || "Tente novamente mais tarde.",
+        title: t('contact.error.title'),
+        description: error.message || t('contact.error.desc'),
         variant: "destructive",
       });
     }
@@ -58,8 +60,8 @@ export default function Contact() {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Campos obrigatórios",
-        description: "Por favor, preencha nome, email e mensagem.",
+        title: t('contact.required.title'),
+        description: t('contact.required.desc'),
         variant: "destructive",
       });
       return;
@@ -76,36 +78,36 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="contact-title">
-            Entre em <span className="text-accent">Contato</span>
+            {t('contact.title')} <span className="text-accent">{t('contact.titleAccent')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="contact-description">
-            Pronto para criar sua próxima obra de arte? Entre em contato conosco para agendar uma consulta.
+            {t('contact.description')}
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="glass-card rounded-lg p-8" data-testid="contact-form-container">
-            <h3 className="font-serif text-2xl font-semibold mb-6">Envie uma Mensagem</h3>
+            <h3 className="font-serif text-2xl font-semibold mb-6">{t('contact.formTitle')}</h3>
             <form className="space-y-6" onSubmit={handleSubmit} data-testid="contact-form">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <Label className="block text-sm font-medium mb-2">Nome *</Label>
+                  <Label className="block text-sm font-medium mb-2">{t('contact.name')} *</Label>
                   <Input 
                     type="text"
                     className="w-full bg-input border border-border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
-                    placeholder="Seu nome"
+                    placeholder={t('contact.namePlaceholder')}
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
                     data-testid="input-name"
                   />
                 </div>
                 <div>
-                  <Label className="block text-sm font-medium mb-2">Email *</Label>
+                  <Label className="block text-sm font-medium mb-2">{t('contact.email')} *</Label>
                   <Input 
                     type="email"
                     className="w-full bg-input border border-border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
-                    placeholder="seu@email.com"
+                    placeholder={t('contact.emailPlaceholder')}
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
                     data-testid="input-email"
@@ -114,11 +116,11 @@ export default function Contact() {
               </div>
               
               <div>
-                <Label className="block text-sm font-medium mb-2">Telefone</Label>
+                <Label className="block text-sm font-medium mb-2">{t('contact.phone')}</Label>
                 <Input 
                   type="tel"
                   className="w-full bg-input border border-border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
-                  placeholder="+351 xxx xxx xxx"
+                  placeholder={t('contact.phonePlaceholder')}
                   value={formData.phone}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   data-testid="input-phone"
@@ -126,28 +128,28 @@ export default function Contact() {
               </div>
               
               <div>
-                <Label className="block text-sm font-medium mb-2">Tipo de Tatuagem</Label>
+                <Label className="block text-sm font-medium mb-2">{t('contact.tattooType')}</Label>
                 <Select onValueChange={(value) => handleInputChange('tattooType', value)} data-testid="select-tattoo-type">
                   <SelectTrigger className="w-full bg-input border border-border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
-                    <SelectValue placeholder="Selecione o estilo" />
+                    <SelectValue placeholder={t('contact.selectStyle')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="realismo">Realismo</SelectItem>
-                    <SelectItem value="tradicional">Tradicional</SelectItem>
-                    <SelectItem value="fine-line">Fine Line</SelectItem>
-                    <SelectItem value="geometrico">Geométrico</SelectItem>
-                    <SelectItem value="cover-up">Cover-Up</SelectItem>
+                    <SelectItem value="realismo">{t('services.realism')}</SelectItem>
+                    <SelectItem value="tradicional">{t('services.traditional')}</SelectItem>
+                    <SelectItem value="fine-line">{t('services.fineline')}</SelectItem>
+                    <SelectItem value="geometrico">{t('services.geometric')}</SelectItem>
+                    <SelectItem value="cover-up">{t('services.coverup')}</SelectItem>
                     <SelectItem value="outro">Outro</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
               
               <div>
-                <Label className="block text-sm font-medium mb-2">Mensagem *</Label>
+                <Label className="block text-sm font-medium mb-2">{t('contact.message')} *</Label>
                 <Textarea 
                   rows={4}
                   className="w-full bg-input border border-border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
-                  placeholder="Descreva sua ideia de tatuagem..."
+                  placeholder={t('contact.messagePlaceholder')}
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
                   data-testid="textarea-message"
@@ -160,7 +162,7 @@ export default function Contact() {
                 disabled={contactMutation.isPending}
                 data-testid="button-submit-contact"
               >
-                {contactMutation.isPending ? "Enviando..." : "Enviar Mensagem"}
+                {contactMutation.isPending ? t('contact.submitting') : t('contact.submitBtn')}
               </Button>
             </form>
           </div>
@@ -168,7 +170,7 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="glass-card rounded-lg p-8" data-testid="contact-info">
-              <h3 className="font-serif text-2xl font-semibold mb-6">Informações de Contato</h3>
+              <h3 className="font-serif text-2xl font-semibold mb-6">{t('contact.infoTitle')}</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4" data-testid="contact-location">
@@ -223,8 +225,8 @@ export default function Contact() {
               <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center text-muted-foreground">
                 <div className="text-center">
                   <Map className="w-16 h-16 mx-auto mb-4" />
-                  <p className="font-medium">Mapa Interativo</p>
-                  <p className="text-sm">Google Maps será integrado aqui</p>
+                  <p className="font-medium">{t('contact.mapTitle')}</p>
+                  <p className="text-sm">{t('contact.mapDesc')}</p>
                 </div>
               </div>
             </div>
