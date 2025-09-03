@@ -47,7 +47,7 @@ export default function About() {
               {/* Tattoo equipment and hygiene standards */}
               <div className="glass-card rounded-lg overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                  src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
                   alt="Equipamentos profissionais Queen of Hearts"
                   className="w-full h-32 object-cover"
                   data-testid="about-equipment-image"
@@ -56,7 +56,7 @@ export default function About() {
               {/* Professional tattoo artist at work */}
               <div className="glass-card rounded-lg overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1590246814883-57c511ad2d05?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                  src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
                   alt="Artista Queen of Hearts trabalhando"
                   className="w-full h-32 object-cover"
                   data-testid="about-artist-image"
