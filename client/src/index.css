@@ -79,16 +79,12 @@
 
 @keyframes glow-pulse {
   0%, 100% { 
-    box-shadow: 
-      0 0 20px hsl(0 100% 50% / 0.4),
-      0 0 40px hsl(0 100% 50% / 0.2),
-      0 0 80px hsl(0 100% 50% / 0.1);
+    box-shadow: 0 0 15px hsl(0 100% 50% / 0.3);
+    transform: scale(1);
   }
   50% { 
-    box-shadow: 
-      0 0 30px hsl(0 100% 50% / 0.8),
-      0 0 60px hsl(0 100% 50% / 0.4),
-      0 0 120px hsl(0 100% 50% / 0.2);
+    box-shadow: 0 0 25px hsl(0 100% 50% / 0.6);
+    transform: scale(1.02);
   }
 }
 
@@ -101,6 +97,11 @@
 @keyframes scan-lines {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(100vh); }
+}
+
+@keyframes optimized-fade {
+  from { opacity: 0; transform: translate3d(0, 10px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
 @keyframes float {
@@ -214,10 +215,12 @@
       rgba(15, 15, 15, 0.9) 0%, 
       rgba(30, 30, 30, 0.6) 50%, 
       rgba(15, 15, 15, 0.9) 100%);
-    backdrop-filter: blur(25px) saturate(200%);
-    border: 1px solid rgba(255, 0, 0, 0.4);
+    backdrop-filter: blur(12px) saturate(150%);
+    border: 1px solid rgba(255, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
+    will-change: transform;
+    transform: translateZ(0);
   }
   
   .glass-card::before {

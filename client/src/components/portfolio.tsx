@@ -55,14 +55,16 @@ export default function Portfolio() {
           {portfolioItems.map((item) => (
             <div 
               key={item.id}
-              className="glass-card rounded-lg overflow-hidden group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:red-glow"
+              className="glass-card rounded-lg overflow-hidden group cursor-pointer transform transition-all duration-300 hover:scale-102 will-change-transform"
               data-testid={`portfolio-item-${item.id}`}
             >
               <div className="aspect-square overflow-hidden">
                 <img 
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 will-change-transform"
+                  loading="lazy"
+                  decoding="async"
                   data-testid={`portfolio-image-${item.id}`}
                 />
               </div>

@@ -37,7 +37,7 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             <button
               onClick={() => scrollToSection('inicio')}
-              className="hover:scale-110 transition-all duration-500"
+              className="hover:scale-105 transition-all duration-300 will-change-transform"
               data-testid="logo-button"
             >
               <img 

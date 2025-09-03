@@ -36,7 +36,7 @@ export default function Hero() {
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6" data-testid="hero-content">
-        <div className="mb-12 animate-[zoom-in_1s_ease-out]">
+        <div className="mb-12 animate-[optimized-fade_0.6s_ease-out]">
           <h1 className="cyber-title text-4xl md:text-6xl lg:text-8xl font-bold mb-4 animate-[fade-in_1s_ease-out_0.5s_both]" data-testid="hero-title">
             QUEEN OF HEARTS
           </h1>
