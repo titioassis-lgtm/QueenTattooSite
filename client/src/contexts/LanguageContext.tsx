@@ -115,6 +115,25 @@ const translations = {
     'contact.mapTitle': 'Mapa Interativo',
     'contact.mapDesc': 'Google Maps será integrado aqui',
     
+    // Contact detailed info
+    'contact.locationLabel': 'Localização',
+    'contact.phoneLabel': 'Telefone', 
+    'contact.emailLabel': 'Email',
+    'contact.hoursLabel': 'Horário',
+    'contact.address': 'Rua do Norte, 123\n1200-289 Lisboa, Portugal',
+    'contact.hours': 'Segunda a Sexta: 10:00 - 20:00\nSábado: 10:00 - 18:00\nDomingo: Fechado',
+    
+    // Testimonials
+    'testimonials.title': 'O Que Nossos',
+    'testimonials.titleAccent': 'Clientes Dizem',
+    'testimonials.subtitle': 'Histórias reais de quem confiou na nossa arte',
+    'testimonials.1.name': 'Maria Costa',
+    'testimonials.1.text': 'Experiência incrível! O ambiente é super profissional e o resultado superou todas as minhas expectativas. Recomendo totalmente!',
+    'testimonials.2.name': 'João Silva', 
+    'testimonials.2.text': 'A qualidade do trabalho é excepcional. Fiz uma tatuagem realista e ficou perfeita. A equipe é muito atenciosa e profissional.',
+    'testimonials.3.name': 'Ana Santos',
+    'testimonials.3.text': 'Desde a consulta até o resultado final, tudo foi perfeito. O estúdio tem um ambiente acolhedor e o artista é muito talentoso.',
+    
     // Footer additional
     'footer.address': 'Lisboa, Portugal',
     'footer.phone': '+351 912 345 678',
@@ -223,6 +242,25 @@ const translations = {
     'contact.required.desc': 'Please fill in name, email and message.',
     'contact.mapTitle': 'Interactive Map',
     'contact.mapDesc': 'Google Maps will be integrated here',
+    
+    // Contact detailed info
+    'contact.locationLabel': 'Location',
+    'contact.phoneLabel': 'Phone',
+    'contact.emailLabel': 'Email', 
+    'contact.hoursLabel': 'Hours',
+    'contact.address': 'Rua do Norte, 123\n1200-289 Lisbon, Portugal',
+    'contact.hours': 'Monday to Friday: 10:00 - 20:00\nSaturday: 10:00 - 18:00\nSunday: Closed',
+    
+    // Testimonials
+    'testimonials.title': 'What Our',
+    'testimonials.titleAccent': 'Clients Say',
+    'testimonials.subtitle': 'Real stories from those who trusted our art', 
+    'testimonials.1.name': 'Maria Costa',
+    'testimonials.1.text': 'Incredible experience! The environment is super professional and the result exceeded all my expectations. I totally recommend it!',
+    'testimonials.2.name': 'João Silva',
+    'testimonials.2.text': 'The quality of the work is exceptional. I got a realistic tattoo and it turned out perfect. The team is very attentive and professional.',
+    'testimonials.3.name': 'Ana Santos',
+    'testimonials.3.text': 'From consultation to final result, everything was perfect. The studio has a welcoming atmosphere and the artist is very talented.',
     
     // Footer additional
     'footer.address': 'Lisbon, Portugal',

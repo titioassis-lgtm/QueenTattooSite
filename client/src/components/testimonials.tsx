@@ -1,27 +1,30 @@
 import { Star, Quote } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Testimonials() {
+  const { t } = useLanguage();
+  
   const testimonials = [
     {
       id: 1,
-      name: "Maria Costa",
+      name: t('testimonials.1.name'),
       initials: "MC",
       rating: 5,
-      text: "Experiência incrível! O ambiente é super profissional e o resultado superou todas as minhas expectativas. Recomendo totalmente!"
+      text: t('testimonials.1.text')
     },
     {
       id: 2,
-      name: "João Silva",
+      name: t('testimonials.2.name'),
       initials: "JS",
       rating: 5,
-      text: "A qualidade do trabalho é excepcional. Fiz uma tatuagem realista e ficou perfeita. A equipe é muito atenciosa e profissional."
+      text: t('testimonials.2.text')
     },
     {
       id: 3,
-      name: "Ana Santos",
+      name: t('testimonials.3.name'),
       initials: "AS",
       rating: 5,
-      text: "Desde a consulta até o resultado final, tudo foi perfeito. O estúdio tem um ambiente acolhedor e o artista é muito talentoso."
+      text: t('testimonials.3.text')
     }
   ];
 
@@ -30,10 +33,10 @@ export default function Testimonials() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" data-testid="testimonials-title">
-            O que Dizem Nossos <span className="text-accent">Clientes</span>
+            {t('testimonials.title')} <span className="text-accent">{t('testimonials.titleAccent')}</span>
           </h2>
           <p className="text-xl text-muted-foreground" data-testid="testimonials-subtitle">
-            Histórias reais de quem confiou na nossa arte
+            {t('testimonials.subtitle')}
           </p>
         </div>
         

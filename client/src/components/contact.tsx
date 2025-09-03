@@ -178,8 +178,8 @@ export default function Contact() {
                     <MapPin className="text-accent-foreground" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Localização</h4>
-                    <p className="text-muted-foreground">Rua do Norte, 123<br />1200-289 Lisboa, Portugal</p>
+                    <h4 className="font-semibold mb-1">{t('contact.locationLabel')}</h4>
+                    <p className="text-muted-foreground" style={{whiteSpace: 'pre-line'}}>{t('contact.address')}</p>
                   </div>
                 </div>
                 
@@ -188,8 +188,8 @@ export default function Contact() {
                     <Phone className="text-accent-foreground" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Telefone</h4>
-                    <p className="text-muted-foreground">+351 912 345 678</p>
+                    <h4 className="font-semibold mb-1">{t('contact.phoneLabel')}</h4>
+                    <p className="text-muted-foreground">{t('footer.phone')}</p>
                   </div>
                 </div>
                 
@@ -198,8 +198,8 @@ export default function Contact() {
                     <Mail className="text-accent-foreground" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Email</h4>
-                    <p className="text-muted-foreground">info@queenofheartslisboa.com</p>
+                    <h4 className="font-semibold mb-1">{t('contact.emailLabel')}</h4>
+                    <p className="text-muted-foreground">{t('footer.email')}</p>
                   </div>
                 </div>
                 
@@ -208,11 +208,9 @@ export default function Contact() {
                     <Clock className="text-accent-foreground" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Horário</h4>
-                    <p className="text-muted-foreground">
-                      Segunda a Sexta: 10:00 - 20:00<br />
-                      Sábado: 10:00 - 18:00<br />
-                      Domingo: Fechado
+                    <h4 className="font-semibold mb-1">{t('contact.hoursLabel')}</h4>
+                    <p className="text-muted-foreground" style={{whiteSpace: 'pre-line'}}>
+                      {t('contact.hours')}
                     </p>
                   </div>
                 </div>
