@@ -1,6 +1,5 @@
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoImage from "@assets/444492753_1007221770758862_3225863585255241508_n_1756924805834.jpg";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -38,16 +37,6 @@ export default function Hero() {
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6" data-testid="hero-content">
         <div className="mb-12 animate-[zoom-in_1s_ease-out]">
-          <div className="mb-12 flex justify-center" data-testid="hero-logo-container">
-            <div className="logo-container animate-[glow-pulse_2s_ease-in-out_infinite_alternate,float_3s_ease-in-out_infinite]">
-              <img 
-                src={logoImage}
-                alt="Queen of Hearts Tattoos Logo"
-                className="h-48 w-auto relative z-10"
-                data-testid="hero-logo"
-              />
-            </div>
-          </div>
           <h1 className="cyber-title text-4xl md:text-6xl lg:text-8xl font-bold mb-4 animate-[fade-in_1s_ease-out_0.5s_both]" data-testid="hero-title">
             QUEEN OF HEARTS
           </h1>
